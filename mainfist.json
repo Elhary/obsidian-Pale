@@ -1,0 +1,8 @@
+{
+    "name": "Pale - 淡",
+    "author": "El Harris",
+    "Version": "0.0.1",
+    "repo": "https://github.com/Elhary/Pale---",
+    "screenshot": "screenshot.png",
+    "modes": ["dark", "light"]
+  }
