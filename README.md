@@ -28,5 +28,5 @@ Enhance your Obsidian experience with the Pale Theme, offering both light and da
 
 ## Feedback
 
-If you have any issues or suggestions, please  [submit an issue](https://github.com/Elhary/Pale---/issues) or raise a  [pull request](https://github.com/Elhary/Pale---/pulls).
+If you have any issues or suggestions, please  [submit an issue](https://github.com/Elhary/Pale/issues) or raise a  [pull request](https://github.com/Elhary/Pale/pulls).
 
