@@ -4,12 +4,6 @@
     font-family: "Roboto Slab", serif;
 }
 
-:root {
-    --light-background: #f3e8dd;
-    --color-1: #C8A2B5;
-    --shadow: 2px 3px 20px 1px rgba(150, 150, 150, 0.367);
-}
-
 .theme-light {
     --background-primary: #eae3d8;
     --shadow: 2px 3px 10px 1px rgba(150, 150, 150, 0.282);
@@ -25,8 +19,14 @@
 
 .theme-dark {
     --background-primary: #454545;
+    --interactive-normal: #484848;
     --shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.271);
-    --h1-color: #ffffff;
+    --h1-color: #b9b9b9;
+    --h2-color: #b9b9b9;
+    --h3-color: #b9b9b9;
+    --h4-color: #b9b9b9;
+    --h5-color: #b9b9b9;
+    --h6-color: #b9b9b9;
 }
 
 .theme-light .workspace,
@@ -65,8 +65,10 @@
     box-shadow: var(--shadow);
 }
 
+.canvas-controls,
 .graph-controls {
-    right: 20px;
+    right: 35px;
+    top: 30px;
 }
 
 .theme-light .view-header-title-container,
@@ -80,9 +82,7 @@
     position: relative;
     border-radius: 10px;
     margin: 10px;
-    overflow: hidden;
     box-shadow: var(--shadow);
-    gap: var(--size-4-1);
     border-right: none;
 }
 
@@ -129,17 +129,20 @@ body.is-focused .workspace-ribbon.mod-left {
     background-color: var(--background-primary);
 }
 
-.modal-container.mod-dim .modal {
+.theme-light .modal-container.mod-dim .modal,
+.theme-dark .modal-container.mod-dim .modal {
     border-radius: 20px;
     border: none;
 }
 
-.modal.mod-settings .vertical-tab-header {
+.theme-light .modal.mod-settings .vertical-tab-header,
+.theme-dark .modal.mod-settings .vertical-tab-header {
     border: none;
     background-color: var(--background-primary);
 }
 
-select, .dropdown {
+select,
+.dropdown {
     box-shadow: var(--shadow);
 }
 
@@ -147,4 +150,8 @@ select, .dropdown {
     top: 10px;
     right: 15px;
     margin: 10px;
+}
+
+button.mod-warning {
+    background-color: rgb(183, 93, 93);
 }
