@@ -26,6 +26,8 @@
 .theme-light .workspace,
 .theme-light .workspace-leaf-content,
 .theme-light .workspace-tab-header-container,
+.theme-light .workspace-split.mod-left-split,
+.theme-dark .workspace-split.mod-left-split,
 .theme-dark .workspace,
 .theme-dark .workspace-leaf-content,
 .theme-dark .workspace-tab-header-container {
@@ -53,7 +55,7 @@
 .theme-light .workspace-split.mod-root .view-content,
 .theme-dark .workspace-split.mod-root .view-content {
     margin: 15px 26px;
-    max-width: 1400px;
+    min-width: 1400px;
     background-color: var(--background-primary);
     border-radius: 20px;
     box-shadow: var(--shadow);
@@ -63,6 +65,7 @@
 .graph-controls {
     right: 35px;
     top: 30px;
+    
 }
 
 .theme-light .view-header-title-container,
@@ -109,6 +112,8 @@
     margin-top: 16em;
 }
 
+
+
 .theme-light .nav-files-container,
 .theme-dark .nav-files-container {
     margin: 10px;
@@ -123,9 +128,19 @@ body.is-focused .workspace-ribbon.mod-left {
     background-color: var(--background-primary);
 }
 
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+    background-color: var(--background-primary);
+    box-shadow: var(--shadow);
+    margin-bottom: 14px;
+    border-radius: 50px;
+    max-width: 300px;
+}
+
+
 .theme-light .modal-container.mod-dim .modal,
 .theme-dark .modal-container.mod-dim .modal {
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
 }
 
@@ -149,3 +164,5 @@ select,
 button.mod-warning {
     background-color: rgb(183, 93, 93);
 }
+
+
