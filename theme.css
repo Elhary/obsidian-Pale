@@ -54,10 +54,11 @@
 
 .theme-light .workspace-split.mod-root .view-content,
 .theme-dark .workspace-split.mod-root .view-content {
-    margin: 15px 26px;
-    min-width: 1400px;
+    margin: 15px 20px;
+    max-width: 1400px;
     background-color: var(--background-primary);
     border-radius: 20px;
+    z-index: 2;
     box-shadow: var(--shadow);
 }
 
@@ -65,7 +66,6 @@
 .graph-controls {
     right: 35px;
     top: 30px;
-    
 }
 
 .theme-light .view-header-title-container,
@@ -113,7 +113,6 @@
 }
 
 
-
 .theme-light .nav-files-container,
 .theme-dark .nav-files-container {
     margin: 10px;
@@ -130,11 +129,15 @@ body.is-focused .workspace-ribbon.mod-left {
 
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+    position: relative;
     background-color: var(--background-primary);
     box-shadow: var(--shadow);
     margin-bottom: 14px;
-    border-radius: 50px;
-    max-width: 300px;
+    border-radius: 10px;
+    border: none;
+    z-index: 1;
+    left: 10px;
+    max-width: 290px;
 }
 
 
@@ -164,5 +167,4 @@ select,
 button.mod-warning {
     background-color: rgb(183, 93, 93);
 }
-
 

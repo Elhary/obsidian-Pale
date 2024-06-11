@@ -2,7 +2,7 @@
     "name": "Pale - 淡",
     "author": "Elhary",
     "minAppVersion": "0.14.0",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repo": "https://github.com/Elhary/obsidian-Pale",
     "screenshot": "screenshot.png",
     "modes": ["dark", "light"]
