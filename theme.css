@@ -27,12 +27,11 @@
 .theme-light .workspace-leaf-content,
 .theme-light .workspace-tab-header-container,
 .theme-light .workspace-split.mod-left-split,
-.theme-dark .workspace-split.mod-left-split,
 .theme-dark .workspace,
 .theme-dark .workspace-leaf-content,
-.theme-dark .workspace-tab-header-container {
+.theme-dark .workspace-tab-header-container,
+.theme-dark .workspace-split.mod-left-split {
     background-color: var(--background-primary);
-    border: none;
 }
 
 .workspace-tab-header-container,
@@ -40,7 +39,9 @@
     border: none;
 }
 
-.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right,
+body.is-focused .titlebar,
+body.is-focused .workspace-ribbon.mod-left {
     background-color: var(--background-primary);
 }
 
@@ -58,7 +59,6 @@
     max-width: 1400px;
     background-color: var(--background-primary);
     border-radius: 20px;
-    z-index: 2;
     box-shadow: var(--shadow);
 }
 
@@ -70,6 +70,20 @@
 
 .theme-light .view-header-title-container,
 .theme-dark .view-header-title-container {
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    border: none;
+}
+
+.workspace-leaf-content[data-type='outline'] .view-content,
+.backlink-pane,
+.outgoing-link-pane,
+.tag-container {
+    margin: 10px;
     box-shadow: var(--shadow);
     border-radius: 10px;
 }
@@ -104,6 +118,10 @@
     background-color: var(--interactive-accent);
 }
 
+.workspace-ribbon .sidebar-toggle-button .clickable-icon {
+    color: #ededed;
+}
+
 .theme-dark .workspace-ribbon .sidebar-toggle-button .clickable-icon {
     color: var(--h1-color);
 }
@@ -111,7 +129,6 @@
 .side-dock-actions {
     margin-top: 16em;
 }
-
 
 .theme-light .nav-files-container,
 .theme-dark .nav-files-container {
@@ -122,35 +139,23 @@
     box-shadow: var(--shadow);
 }
 
-body.is-focused .titlebar,
-body.is-focused .workspace-ribbon.mod-left {
-    background-color: var(--background-primary);
-}
-
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
-    position: relative;
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
     background-color: var(--background-primary);
     box-shadow: var(--shadow);
     margin-bottom: 14px;
     border-radius: 10px;
     border: none;
     z-index: 1;
-    left: 10px;
-    max-width: 290px;
+    width: 100%;
 }
-
 
 .theme-light .modal-container.mod-dim .modal,
-.theme-dark .modal-container.mod-dim .modal {
-    border-radius: 10px;
-    border: none;
-}
-
+.theme-dark .modal-container.mod-dim .modal,
 .theme-light .modal.mod-settings .vertical-tab-header,
 .theme-dark .modal.mod-settings .vertical-tab-header {
     border: none;
     background-color: var(--background-primary);
+    border-radius: 10px;
 }
 
 select,
@@ -167,4 +172,3 @@ select,
 button.mod-warning {
     background-color: rgb(183, 93, 93);
 }
-
