@@ -2,7 +2,7 @@
     "name": "Pale - 淡",
     "author": "Elhary",
     "minAppVersion": "0.14.0",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "screenshot": "screenshot.png",
     "modes": ["dark", "light"]
   }
