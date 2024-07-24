@@ -1,17 +1,23 @@
 # Pale - 淡 Theme for Obsidian (Light and Dark Modes)
 
 
-Enhance your Obsidian experience with the Pale Theme, offering both light and dark modes. This theme features a clean, elegant layout designed to provide a pleasant and visually appealing workspace.
+![GitHub last commit](https://img.shields.io/github/last-commit/Elhary/obsidian-Pale?color=573E7A&label=last%20update&logo=github&style=for-the-badge)
+![GitHub issues by-label](https://img.shields.io/github/issues/Elhary/obsidian-Pale/help%20wanted?color=573E7A&logo=github&style=for-the-badge) 
+![GitHub Repo stars](https://img.shields.io/github/stars/Elhary/obsidian-Pale?color=573E7A&logo=github&style=for-the-badge)
+
+
+Enhance your Obsidian experience with the Pale Theme, offering both light and dark modes. This theme features a clean.
+elegant layout designed to provide a pleasant and visually appealing workspace.
 
 ![preview_img_1](./img/preview_img_1.png)
 
 
 
-## Light
+# Light
 ![preview_img_3](./img/preview_img_2.png)
 
 
-## Dark 
+# Dark 
 
 ![preview_img_2](./img/preview_img_3.png)
 
@@ -24,6 +30,7 @@ Enhance your Obsidian experience with the Pale Theme, offering both light and da
 - Go to the Appearance section.
 - Click Manage next to Themes.
 - Search for "Pale" and select "Install and use"
+
 
 
 ## Feedback
