@@ -45,7 +45,7 @@ body.is-focused .workspace-ribbon.mod-left {
 
 .workspace-split.mod-root .view-content {
     margin: 15px 20px;
-    max-width: 1400px;
+    max-width: 1422px;
     overflow-y: scroll;
     background-color: var(--background-primary);
     border-radius: 20px;
