@@ -1,3 +1,4 @@
+
 .theme-light {
     --background-primary: #efdcbc;
     --background-secondary: rgba(255, 255, 255, 0.062);
@@ -173,10 +174,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 .modal-bg {
     background-color: #9898982c;
-}
-
-.modal {
-    background-color: transparent !important;
 }
 
 .horizontal-tab-content,
