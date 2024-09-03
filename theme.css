@@ -1,14 +1,30 @@
+body {
+    --icon-size: 17px;
+    --button-radius: 5px;
+    --checkbox-radius: 5px;
+    --checkbox-size: 20px;
+    --nav-item-size: 12px;
+    --tab-divider-color: transparent;
+    --tab-outline-color: transparent;
+    --tab-curve:1px;
+    --tab-font-size: 14px;
+    --background-modifier-error: #9e5245;
+}
 
 .theme-light {
     --background-primary: #efdcbc;
     --background-secondary: rgba(255, 255, 255, 0.062);
-    --shadow: 2px 3px 9px 1px rgba(150, 150, 150, 0.393);
+    --shadow: 0 2px 9px 1px rgba(71, 71, 71, 0.212);
     --interactive-normal: #ecdfd2;
-    --background-modifier-form-field: #f2ece6;
+    --sidebar-forground-color: #b8b8b8bd;
+    --tab-text-color: #242424c7;
     --code-background: #292929;
     --table-border-color: #8c8c8cc7;
+    --nav-item-color-active: #191919bb;
+    --nav-item-color: #ffffff;
+    --nav-item-color-hover: #3e3e3e9c;
     --setting-bg: #efdcbcb6;
-    --hr-color: #8c8c8cc7;
+    --hr-color: #8c8c8c46;
     --icon-color: #525252;
     --h1-color: #242424c7;
     --h2-color: #242424c7;
@@ -19,13 +35,16 @@
 }
 
 .theme-dark {
-    --background-primary: #2a2a2a;
+    --background-primary: #323232;
     --interactive-normal: #484848;
     --code-background: #232323;
-    --shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.271);
+    --shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.278);
     --table-border-color: #8c8c8cc7;
+    --nav-item-color-active: #ffffffbb;
+    --nav-item-color: #ffffff;
+    --nav-item-color-hover: #dedede6e;
     --setting-bg: #2a2a2a98;
-    --hr-color: #8c8c8cc7;
+    --hr-color: #8c8c8c3c;
     --icon-color: #dddddd;
     --h1-color: #d9d8d8;
     --h2-color: #d4d4d4;
@@ -72,15 +91,14 @@ body.is-focused .workspace-ribbon.mod-left,
     margin-left: 100px;
 }
 
-.workspace-split.mod-root .view-content {
-    margin: 15px 20px;
-    max-width: 1422px;
-    overflow-y: scroll;
-    background-color: var(--background-primary);
+.theme-light .mod-root .workspace-leaf,
+.theme-dark .mod-root .workspace-leaf {
+    padding: 5px 13px;
+    margin: 25px;
     border-radius: 20px;
+    max-height: 780px;
     box-shadow: var(--shadow);
 }
-
 .canvas-controls,
 .graph-controls {
     right: 35px;
@@ -92,7 +110,6 @@ body.is-focused .workspace-ribbon.mod-left,
 .backlink-pane,
 .outgoing-link-pane,
 .tag-container {
-    box-shadow: var(--shadow);
     border-radius: 10px;
 }
 
@@ -112,8 +129,8 @@ body.is-focused .workspace-ribbon.mod-left,
     background-color: var(--background-primary);
 }
 
-.workspace-split.mod-left-split>.workspace-leaf-resize-handle,
-.workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     border: none;
 }
 
@@ -173,7 +190,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 .modal-bg {
-    background-color: #9898982c;
+    background-color: rgba(152, 152, 152, 0.173);
 }
 
 .horizontal-tab-content,
@@ -185,12 +202,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     margin: 10px;
 }
 
-
-
 .modal-container.mod-dim .modal,
 .modal.mod-settings .vertical-tab-header {
     border: none;
-    background-color: transparent !important;
+    background-color: transparent;
     backdrop-filter: blur(70px);
 }
 
@@ -226,8 +241,9 @@ body:not(.native-scrollbars) .modal-close-button {
     border: none;
 }
 
-button.mod-warning {
-    background-color: rgb(183, 93, 93);
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+    padding: 10px;
 }
 
 .ͼ1 .cm-scroller {
@@ -235,20 +251,20 @@ button.mod-warning {
 }
 
 .theme-light .menu {
-    background-color: rgba(255, 255, 255, 0.289) !important;
+    background-color: rgba(255, 255, 255, 0.289);
     backdrop-filter: blur(50px);
     color: #212121;
 }
 
 .theme-dark .menu {
-    background-color: rgba(69, 69, 69, 0.289) !important;
+    background-color: rgba(69, 69, 69, 0.289);
     backdrop-filter: blur(50px);
     color: #b4b4b4;
 }
 
 input.prompt-input,
 .prompt {
-    background-color: transparent !important;
+    background-color: transparent;
     backdrop-filter: blur(30px);
     border: none;
 }
