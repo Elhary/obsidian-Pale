@@ -9,16 +9,12 @@
 Enhance your Obsidian experience with the Pale Theme, offering both light and dark modes. This theme features a clean.
 elegant layout designed to provide a pleasant and visually appealing workspace.
 
-![preview_img_1](./img/preview_img_1.png)
-
-
 
 # Light
 ![preview_img_3](./img/preview_img_2.png)
 
 
 # Dark 
-
 ![preview_img_2](./img/preview_img_3.png)
 
 
