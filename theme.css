@@ -1,14 +1,19 @@
 body {
-    --icon-size: 17px;
+    --icon-size: 18px;
     --button-radius: 5px;
+    --icon-stroke: 2.2px;
+    --icon-xs: 15px;
+    --icon-l: 20px;
+    --ribbon-width: 51px;
     --checkbox-radius: 5px;
     --checkbox-size: 20px;
     --nav-item-size: 12px;
     --tab-divider-color: transparent;
     --tab-outline-color: transparent;
-    --tab-curve:1px;
-    --tab-font-size: 14px;
+    --tab-curve:0px;
+    --tab-font-size: 12px;
     --background-modifier-error: #9e5245;
+
 }
 
 .theme-light {
@@ -38,8 +43,9 @@ body {
     --background-primary: #323232;
     --interactive-normal: #484848;
     --code-background: #232323;
-    --shadow: 0 2px 9px 1px rgba(0, 0, 0, 0.278);
+    --shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.278);
     --table-border-color: #8c8c8cc7;
+    --tab-background-active:#4d4c4cf3;
     --nav-item-color-active: #ffffffbb;
     --nav-item-color: #ffffff;
     --nav-item-color-hover: #dedede6e;
@@ -65,6 +71,12 @@ body {
     --code-string: #05a3a3;
 }
 
+
+.theme-light .workspace,
+.theme-dark .workspace {
+    background-color: var(--background-primary);
+}
+
 .workspace,
 .workspace-leaf-content,
 .workspace-tab-header-container,
@@ -72,40 +84,78 @@ body {
     background-color: var(--background-primary);
 }
 
-.workspace-tab-header-container {
+
+.workspace-tab-header.is-active {
+    box-shadow: var(--shadow);
     border: none;
 }
 
-.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right,
-body.is-focused .titlebar,
-body.is-focused .workspace-ribbon.mod-left,
-.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+.theme-light .workspace-tab-header-container:not(.workspace-split) {
+    align-items: center;
+    position: relative;
+    height: 60px;
+    background-color: var(--accent-color-bg);
+}
+
+.theme-dark .workspace-tab-header-container:not(.workspace-split) {
+    align-items: center;
+    position: relative;
+    border: none;
+    height: 60px;
+    
+}
+
+
+.mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active {
+    background-color: var(--tab-background-active);
+    height: 35px;
+    border-radius: 5px;
+    color: rgb(60, 60, 60);
+    border: none;
+    text-align: center !important;
+}
+
+
+.mod-root:not(.mod-left-split):not(.mod-right-split) .workspace-tabs:not(.mod-stacked) .workspace-tab-header {
+    margin: 0 2.5px 5px 2.5px;
+}
+
+
+
+
+
+
+.workspace-split.mod-horizontal {
+    margin: 9px;
+}
+
+.workspace-leaf-content {
+    margin: 10px 0 50px 2px;
+}
+
+.workspace-tabs .workspace-leaf{
     background-color: var(--background-primary);
+    
 }
 
-.is-focused .workspace-tab-header.is-active {
+.mod-root .workspace-leaf {
+    border-radius: 15px;
+    padding: 15px;
     box-shadow: var(--shadow);
+    margin: 10px;
+    max-height:1100px;
+    height: auto;
+
 }
 
-.mod-root .workspace-tab-header-container-inner {
-    margin-left: 100px;
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    border: none;
 }
 
-.theme-light .mod-root .workspace-leaf,
-.theme-dark .mod-root .workspace-leaf {
-    padding: 5px 13px;
-    margin: 25px;
-    border-radius: 20px;
-    max-height: 780px;
-    box-shadow: var(--shadow);
-}
-.canvas-controls,
-.graph-controls {
-    right: 35px;
-    top: 30px;
-}
 
-.view-header-title-container,
+
+view-header-title-container,
 .workspace-leaf-content[data-type='outline'] .view-content,
 .backlink-pane,
 .outgoing-link-pane,
@@ -119,11 +169,17 @@ body.is-focused .workspace-ribbon.mod-left,
 .tag-container {
     margin: 10px;
 }
+
+
+
+
+
 
 .workspace-ribbon {
     position: relative;
     border-radius: 10px;
-    margin: 10px;
+    margin-left: 10px;
+    bottom: 10px;
     box-shadow: var(--shadow);
     border-right: none;
     background-color: var(--background-primary);
@@ -132,6 +188,14 @@ body.is-focused .workspace-ribbon.mod-left,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
 .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
     border: none;
+}
+.mod-left-split .workspace-tab-header.has-active-menu, .mod-right-split .workspace-tab-header.has-active-menu, .mod-left-split .workspace-tab-header.is-active, .mod-right-split .workspace-tab-header.is-active{
+    padding: 5px 3px;
+    background-color: var(--background-primary);
+}
+
+.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner{
+    padding: 10px;
 }
 
 .nav-header {
@@ -175,19 +239,30 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     position: relative;
     background-color: var(--background-primary);
     box-shadow: var(--shadow);
-    max-width: 500px;
     margin-bottom: 14px;
+    margin-left: 10px;
     border-radius: 10px;
     align-items: center;
     border: none;
     padding: 10px;
     z-index: 1;
     justify-content: center;
+    bottom: 30px;
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
     cursor: pointer;
 }
+
+.workspace-split.mod-horizontal > * {
+    width: unset;
+}
+
+
+
+
+
+
 
 .modal-bg {
     background-color: rgba(152, 152, 152, 0.173);
@@ -198,7 +273,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
     background-color: var(--setting-bg);
     box-shadow: var(--shadow);
     border-radius: 15px;
-    max-height: 678px;
+    height: 100%;
     margin: 10px;
 }
 
@@ -273,4 +348,22 @@ input.prompt-input:hover,
 input.prompt-input:focus,
 input.prompt-input:focus-visible {
     border: none;
+}
+
+
+.is-hidden-frameless:not(.is-fullscreen).is-focused .titlebar-button-container.mod-right {
+    background-color: var(--background-primary);
+    cursor: pointer;
+}
+
+.is-hidden-frameless:not(.is-fullscreen) .titlebar-button-container.mod-right {
+    background-color: var(--background-primary);
+}
+
+.titlebar-inner {
+    color: var(--background-primary);
+}
+
+.is-focused .titlebar-inner {
+    color: var(--icon-color);
 }
