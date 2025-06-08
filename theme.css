@@ -367,3 +367,30 @@ input.prompt-input:focus-visible {
 .is-focused .titlebar-inner {
     color: var(--icon-color);
 }
+
+/* Fix for checkbox display in tasks query windows */
+.markdown-source-view.mod-cm6 .task-list-item-checkbox,
+.markdown-preview-view .task-list-item-checkbox {
+    margin-left: 0 !important;
+    margin-right: 0.5em !important;
+}
+
+/* Specific fix for tasks plugin query results */
+.tasks-group-heading .task-list-item-checkbox,
+.tasks-list-text .task-list-item-checkbox,
+.tasks-query .task-list-item-checkbox {
+    margin-left: 0 !important;
+    position: relative !important;
+    left: 0 !important;
+}
+
+/* Ensure checkboxes in edit mode are properly positioned */
+.cm-s-obsidian span.cm-formatting-task {
+    margin-left: 0 !important;
+}
+
+/* Additional fix for inline task checkboxes */
+.markdown-source-view.mod-cm6 .HyperMD-task-line .task-list-item-checkbox {
+    margin-left: 0 !important;
+    transform: none !important;
+}
